@@ -16,7 +16,7 @@ object Tutorial {
     val conf = new Configuration()
     val parser = new GenericOptionsParser(conf, args)
     val remainArgs = parser.getRemainingArgs
-    val tableName = conf.get("output_table_name", defaultTableName)
+    val tableName = conf.get("mart_catering.dwa_crm_tutorial_test", defaultTableName)
     val dt = remainArgs(0)  // dt $now.delta(1).date
     val topK = remainArgs(1).toInt
 
