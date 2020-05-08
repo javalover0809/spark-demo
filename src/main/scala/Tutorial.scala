@@ -1,8 +1,7 @@
-package com.ycard.sankuai.tutorial
-
-import org.apache.spark.sql.SparkSession
 import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.util.GenericOptionsParser
+import org.apache.spark.sql.SparkSession
+
 object Tutorial {
   val defaultTableName = "mart_catering.dwa_crm_tutorial_test"
   def main(args: Array[String]): Unit = {
@@ -25,7 +24,7 @@ object Tutorial {
     val dataLoader = new DataLoader(spark, dt, topK)
     val spu = dataLoader.spu.repartition(10)
 
-    
+
     // 生成数据存储器
     val saver = new Saver(spark, spu, tableName)
     saver.commit()

@@ -1,5 +1,3 @@
-package com.ycard.sankuai.tutorial
-
 import org.apache.spark.sql.{DataFrame, SparkSession}
 
 abstract class TableSaver(spark: SparkSession, df: DataFrame, table:String) extends Serializable {

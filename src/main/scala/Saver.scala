@@ -1,5 +1,3 @@
-package com.ycard.sankuai.tutorial
-import com.ycard.sankuai.utils.TableSaver
 import org.apache.spark.sql.{DataFrame, SparkSession}
 class Saver(spark: SparkSession, df: DataFrame, table: String) extends TableSaver(spark, df, table) {
   def getCreateSQL(table: String): String =

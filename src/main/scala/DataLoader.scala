@@ -1,5 +1,3 @@
-package com.ycard.sankuai.tutorial
-
 import org.apache.spark.sql.SparkSession
 
 case class ReviewSpu(poiID: Long, spu: String)
