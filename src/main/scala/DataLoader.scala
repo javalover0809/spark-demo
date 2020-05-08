@@ -10,9 +10,7 @@ class DataLoader(spark: SparkSession, nowDate: String, topK: Int) extends Serial
        |      poi_id,
        |      recommended_spu_list
        |from
-       |      mart_crm.dwa_crm_tenant_poi_user_review_daily
-       |where partition_date between date_sub('$nowDate', 60) and '$nowDate'
-       |      and length(recommended_spu_list) > 0
+       |      mart_catering_test.app_crm_poi_ss
      """.stripMargin
 
 
