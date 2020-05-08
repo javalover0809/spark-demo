@@ -4,7 +4,7 @@ import org.apache.spark.sql.SparkSession
 import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.util.GenericOptionsParser
 object Tutorial {
-  val defaultTableName = "mart_crm.dwa_crm_tutorial_test"
+  val defaultTableName = "mart_catering.dwa_crm_tutorial_test"
   def main(args: Array[String]): Unit = {
 
     // 生成SparkSession
