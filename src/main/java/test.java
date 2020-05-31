@@ -24,6 +24,7 @@ public class test {
         my.add("这是");
         String t="这个";
         System.out.println("5");
+        //test
         System.out.println(my.getClass());
         test myt=new test();
         yy y=(info)-> System.out.println(info+"都");
