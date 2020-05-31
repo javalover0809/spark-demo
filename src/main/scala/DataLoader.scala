@@ -13,13 +13,9 @@ class DataLoader(spark: SparkSession, nowDate: String, topK: Int) extends Serial
        |      mart_catering_test.app_crm_poi_ss
      """.stripMargin
 
-
-
-
-
   val spu = spark.sql(spuSql)
     .rdd
-    .map(row => ReviewSpu(row.getAs[Long]("poi_id"), row.getAs[String]("recommended_spu_list")))
+    .map(row => ReviewSpu(row.getAs[Long]("poi_id"),row.getAs[String]("recommended_spu_list")))
     .groupBy(_.poiID)
     .mapPartitions(iters => {
       for ((poiID, reviewSpus) <- iters) yield {
